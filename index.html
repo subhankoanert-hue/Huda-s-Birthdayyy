@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday Hippo</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:black;
+      overflow-x:hidden;
+    }
+
+    .page{
+      width:100%;
+      min-height:100vh;
+      display:none;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      padding:20px;
+      text-align:center;
+    }
+
+    .active{
+      display:flex;
+    }
+
+    h1{
+      color:white;
+      font-size:4rem;
+      text-shadow:0 0 25px #ff4da6;
+      animation:glow 2s infinite alternate;
+    }
+
+    h2{
+      color:white;
+      font-size:2rem;
+      margin-bottom:15px;
+    }
+
+    .btn{
+      margin-top:25px;
+      padding:14px 32px;
+      border:none;
+      border-radius:50px;
+      background:#ff4da6;
+      color:white;
+      font-size:1rem;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.08);
+    }
+
+    @keyframes glow{
+
+      from{
+        text-shadow:0 0 10px white;
+      }
+
+      to{
+        text-shadow:0 0 35px #ff4da6;
+      }
+
+    }
+
+    @keyframes float{
+
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-18px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+
+    }
+
+    /* PAGE 2 */
+
+    .memory-container{
+      width:100%;
+      max-width:1400px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:18px;
+      margin-top:20px;
+    }
+
+    .image-column{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .memory-img{
+      width:170px;
+      height:220px;
+      object-fit:cover;
+      border-radius:18px;
+      box-shadow:0 0 12px rgba(255,255,255,0.15);
+    }
+
+    .text-side{
+      max-width:650px;
+      background:rgba(255,255,255,0.08);
+      padding:28px;
+      border-radius:25px;
+      backdrop-filter:blur(10px);
+      color:white;
+      text-align:left;
+    }
+
+    .text-side p{
+      line-height:1.9;
+      font-size:1rem;
+    }
+
+    #surpriseGif{
+      width:420px;
+      max-width:90%;
+      display:none;
+      border-radius:25px;
+      box-shadow:0 0 30px rgba(255,255,255,0.25);
+      animation:float 2s ease-in-out infinite;
+      margin-top:25px;
+    }
+
+    /* MOBILE FRIENDLY */
+
+    @media(max-width:900px){
+
+      h1{
+        font-size:2.3rem;
+      }
+
+      h2{
+        font-size:1.5rem;
+      }
+
+      .memory-container{
+        flex-direction:column;
+      }
+
+      .image-column{
+        flex-direction:row;
+        justify-content:center;
+        flex-wrap:wrap;
+      }
+
+      .memory-img{
+        width:130px;
+        height:170px;
+      }
+
+      .text-side{
+        text-align:center;
+        padding:20px;
+      }
+
+      .text-side p{
+        font-size:0.95rem;
+        line-height:1.8;
+      }
+
+      .btn{
+        padding:12px 24px;
+        font-size:0.9rem;
+      }
+
+      #surpriseGif{
+        width:280px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- PAGE 1 -->
+
+  <section class="page active" id="page1">
+
+    <h1>HAPPY BIRTHDAY HIPPO 🎉</h1>
+
+    <button class="btn" onclick="nextPage(2)">
+      Click Here ❤️
+    </button>
+
+  </section>
+
+  <!-- PAGE 2 -->
+
+  <section class="page" id="page2">
+
+    <h2>Click Here For Surprise ❤️</h2>
+
+    <button class="btn" onclick="nextPage(3)">
+      Open Surprise 🎁
+    </button>
+
+    <div class="memory-container">
+
+      <!-- LEFT SIDE -->
+
+      <div class="image-column">
+
+        <img
+          src="D:/New folder (3)/IMG_6026.png"
+          class="memory-img"
+        >
+
+        <img
+          src="D:/New folder (3)/IMG_6023.png"
+          class="memory-img"
+        >
+
+      </div>
+
+      <!-- CENTER PARAGRAPH -->
+
+      <div class="text-side">
+
+        <p>
+
+          Happy birthday Noor Love you so much jaana
+          You’re the best.
+          I will be honest I feel lucky to have you.
+          When you say Main achi hun na BHAI TUM HOO
+          I just wanna say I’m all yours Ho chuki tum ab.
+
+          <br><br>
+
+          Whenever I achieve some kind of win
+          I always come to you first.
+          You’re so khaas for me.
+          I thought moving on was easy
+          but trust me I can’t move on
+          and to be honest I don’t want to move on.
+          I’m always with you.
+
+          <br><br>
+
+          Whenever i get some kind of good tea
+          em like NOOR KO BATAUNGA.
+
+          <br><br>
+
+          I’m your ehsaan mand like
+          itni achi to deserve ni karta tha😭
+
+          <br><br>
+
+          I still pray like ye mujhe haasil kyu nhi.
+          i wanna marry you.
+
+          <br><br>
+
+          Happy birthday HUDA.
+
+          <br><br>
+
+          YE SAB BREAKUP SE PEHLE LIKHA THA.
+
+          <br><br>
+
+          Ok so you’re my hipopotamos now.
+          life is fr boring without u.
+
+          <br><br>
+
+          I know we are friends rn
+          but idc i love you smmmm.
+
+          <br><br>
+
+          Starting me i thought you’re my karma😭
+          but ig allah is giving me another chance.
+
+          <br><br>
+
+          Like breakup ke baad
+          i literally called u every nightt
+          but like main tumhe bas message ni karta tha.
+
+          <br><br>
+
+          Khairr you’re 17yo now
+          apki jawaani ke din hain
+          maze karo meri duaen apke sath hain😭
+
+          <br><br>
+
+          HAPPY BIRTHDAY HIPOOO 🎉
+
+        </p>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+
+      <div class="image-column">
+
+        <img
+          src="D:/New folder (3)/IMG_4580.png"
+          class="memory-img"
+        >
+
+        <img
+          src="D:/New folder (3)/IMG_6024.png"
+          class="memory-img"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PAGE 3 -->
+
+  <section class="page" id="page3">
+
+    <h1>
+      HAPPY BIRTHDAY HIPPO 🎂
+    </h1>
+
+    <br>
+
+    <p style="color:white; font-size:1.4rem;">
+
+      IDHAR CLICK KAR
+
+    </p>
+
+    <button class="btn" onclick="showGif()">
+      Open Surprise 🎁
+    </button>
+
+    <img
+      id="surpriseGif"
+      src="D:/New folder (3)/IMG_6028.gif"
+    >
+
+  </section>
+
+  <script>
+
+    function nextPage(pageNumber){
+
+      document.querySelectorAll('.page').forEach(page=>{
+        page.classList.remove('active');
+      });
+
+      document.getElementById('page'+pageNumber).classList.add('active');
+
+      confetti({
+        particleCount:120,
+        spread:90,
+        origin:{y:0.6}
+      });
+
+    }
+
+    function showGif(){
+
+      document.getElementById("surpriseGif").style.display = "block";
+
+      confetti({
+        particleCount:250,
+        spread:130,
+        origin:{y:0.6}
+      });
+
+    }
+
+    window.onload = ()=>{
+
+      confetti({
+        particleCount:150,
+        spread:120,
+        origin:{y:0.5}
+      });
+
+    };
+
+  </script>
+
+</body>
+</html>
